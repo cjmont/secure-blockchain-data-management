@@ -9,6 +9,7 @@ import os
 import logging
 from flask_wtf.csrf import CSRFProtect, generate_csrf
 from datetime import timedelta
+from flask_cors import CORS
 
 # Configurar logging
 logging.basicConfig(level=logging.DEBUG)
@@ -17,6 +18,9 @@ logger = logging.getLogger(__name__)
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+
+# Configurar CORS
+CORS(app)
 
 # Configurar CSRF Protection
 csrf = CSRFProtect(app)
