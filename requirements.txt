@@ -1,0 +1,8 @@
+aiohttp
+Flask
+asyncio
+web3==6.19.0
+web3[async]
+pycryptodome
+py-solc-x
+flask-wtf

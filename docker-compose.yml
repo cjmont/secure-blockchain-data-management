@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8098:8098"
+    volumes:
+      - .:/app
+    environment:
+      - PRIVATE_KEY=ce59bd69b382d75ce36daa7300525499cc1c313b9e7fb34123b6c1ab134e076d
+      - CONTRACT_ADDRESS=0x98F1F255Cb1F38CB41e1A7BbB52994906F2a9c29
+      - SECRET_KEY=f3cfe9ed8fae309f02079dbf
