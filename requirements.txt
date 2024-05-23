@@ -6,3 +6,4 @@ web3[async]
 pycryptodome
 py-solc-x
 flask-wtf
+flask-cors
