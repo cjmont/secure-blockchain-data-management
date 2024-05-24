@@ -20,7 +20,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 
 # Configurar CORS
-CORS(app)
+CORS(app, supports_credentials=True, resources={r"/*": {"origins": "*"}})
 
 # Configurar CSRF Protection
 csrf = CSRFProtect(app)
