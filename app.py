@@ -23,7 +23,7 @@ app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 CORS(app, supports_credentials=True, resources={r"/*": {"origins": "*"}})
 
 # Configurar CSRF Protection
-csrf = CSRFProtect(app)
+#csrf = CSRFProtect(app)
 
 # Conectar a Avalanche
 logger.info("Connecting to Avalanche...")
@@ -42,7 +42,7 @@ private_key = os.getenv('PRIVATE_KEY')
 account = w3.eth.account.from_key(private_key)
 
 @app.route('/0x48e1b09fd922b871f5585f10d17f403afe896ce2756a057fc1b340ad48f3fc16', methods=['POST'])
-@csrf.exempt
+#@csrf.exempt
 def generate_csrf_token():
     logger.info("Generating CSRF token")
     
